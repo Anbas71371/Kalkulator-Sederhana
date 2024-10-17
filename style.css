@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .calculator {
+    background-color: #333;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 100%;
+    max-width: 320px; /* Maksimum lebar kalkulator */
+  }
+  
+  .display {
+    background-color: #000;
+    color: #0f0;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden; /* Agar teks tidak melampaui tampilan */
+    white-space: nowrap;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    background-color: #555;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #777;
+  }
+  
+  button:active {
+    background-color: #999;
+  }
+  
+  button.zero {
+    grid-column: span 2;
+  }
+  
+  button:nth-child(4n) {
+    background-color: #ff9800;
+  }
+  
+  button:nth-child(4n):hover {
+    background-color: #ffc107;
+  }
+  
+  /* Buat kalkulator responsif pada perangkat kecil */
+  @media (max-width: 400px) {
+    .display {
+      font-size: 2rem;
+    }
+  
+    button {
+      padding: 15px;
+      font-size: 1.2rem;
+    }
+  }
+  
